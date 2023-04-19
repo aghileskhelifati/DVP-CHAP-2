@@ -1,0 +1,25 @@
+name: multijobs workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Afficher message
+      run: echo "Ceci est le premier job"
+
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Afficher message
+      run: echo "Ceci est le second job"
+
+  third_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Afficher message
+      run: echo "Ceci est le troisième job"
